@@ -16,5 +16,5 @@ jobs:
       - name: Build latex
         uses: hazeyamaLab/latex-action@v1
         with:
-          build_directory: ./seminar/doc
+          build-directory: ./seminar/doc
           build-files: doc.tex
