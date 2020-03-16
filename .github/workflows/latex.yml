@@ -1,0 +1,20 @@
+name: Build LaTeX file and make PDF
+on:
+  push:
+    paths:
+    - '**.tex'
+
+jobs:
+  latex:
+    name: Build LaTeX
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Code
+        uses: actions/checkout@v4
+
+      - name: Build latex
+        uses: hazelab/latex-action@master
+        with:
+          build_directory: ./seminar/doc
+          build-files: doc.tex
